@@ -1,58 +1,18 @@
-%  University of Houston PhD proposal
-%
-% on  PC
-%\documentclass[12pt]{report}
-% \usepackage{uhthesis}
-% \usepackage[pctex32]{graphics}
-% \usepackage[pctex32]{color}
-%\usepackage{psfig}
+%  University of Houston MS/PhD template
 \documentclass[12pt]{report}
 \usepackage{uhthesis3}
-\usepackage{epsfig}
-\usepackage{epsf}
-\input{definitions.tex}
-%\input{algorithms}
-%
-%
-%
-% on UNIX LATEX and Windows PCTEX32
-%\documentstyle[12pt,uhthesis1,psfig]{report}
-%\usepackage{epsfig}
-%\input{algorithms}
-%\input{psfig}
-%\input{dnmmath}
-%\input{ion-math}
 
 \setcounter{secnumdepth}{4}
+
 \begin{document}
 
-\title{\bf \large Thesis Title}
-\author{Name}
-\submitdate{August 2004} \degree{Doctor of Philosophy}{Proposal}
-\adviser{Advisor Name, Chairman\\
-Dept. of ABCD }
-
-\firstreader{Committee Member 1 \\
-Dept. of ABCD 2}
-
-\secondreader{Committee Member 2\\
-Dept. of ABCD 2}
-
-\thirdreader{Committee Member 3\\
-Dept. of ABCD 3}
-
-\fourthreader{Committee Member 4\\
-Dept. of ABCD 4}
-
+\input{meta/title.tex}
+\input{meta/committee.tex}
 
 \copyrightfalse \makecoverpages
-\begin{acknowledgements}
-%\input{acknowledgements.tex}
-\end{acknowledgements}
-
-\begin{abstract}
+\input{acknowledgements.tex}
 \input {abstract.tex}
-\end{abstract}
+
 \setlength{\parskip}{.1 in}
 
 \makecontentspages
@@ -81,10 +41,6 @@ Dept. of ABCD 4}
 
 \FIGSfalse
 
-
-% to fix the page number
-%\input{Sample_chapter.tex}
-%\input{table.tex}
 \input{ch1_Introduction.tex}
 \input{ch2_Background.tex}
 \input{ch3_Methods.tex}
