@@ -1,0 +1,97 @@
+%  University of Houston PhD proposal
+%
+% on  PC
+%\documentclass[12pt]{report}
+% \usepackage{uhthesis}
+% \usepackage[pctex32]{graphics}
+% \usepackage[pctex32]{color}
+%\usepackage{psfig}
+\documentclass[12pt]{report}
+\usepackage{uhthesis3}
+\usepackage{epsfig}
+\usepackage{epsf}
+\input{definitions.tex}
+%\input{algorithms}
+%
+%
+%
+% on UNIX LATEX and Windows PCTEX32
+%\documentstyle[12pt,uhthesis1,psfig]{report}
+%\usepackage{epsfig}
+%\input{algorithms}
+%\input{psfig}
+%\input{dnmmath}
+%\input{ion-math}
+
+\setcounter{secnumdepth}{4}
+\begin{document}
+
+\title{\bf \large Thesis Title}
+\author{Name}
+\submitdate{August 2004} \degree{Doctor of Philosophy}{Proposal}
+\adviser{Advisor Name, Chairman\\
+Dept. of ABCD }
+
+\firstreader{Committee Member 1 \\
+Dept. of ABCD 2}
+
+\secondreader{Committee Member 2\\
+Dept. of ABCD 2}
+
+\thirdreader{Committee Member 3\\
+Dept. of ABCD 3}
+
+\fourthreader{Committee Member 4\\
+Dept. of ABCD 4}
+
+
+\copyrightfalse \makecoverpages
+\begin{acknowledgements}
+%\input{acknowledgements.tex}
+\end{acknowledgements}
+
+\begin{abstract}
+\input {abstract.tex}
+\end{abstract}
+\setlength{\parskip}{.1 in}
+
+\makecontentspages
+
+%uncomment the following for single space drafts
+%\singlespace
+
+% \pagenumbering{romans}{1}
+% \beforepreface
+
+%\pagestyle(empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \input{chapter0Nomenclature.tex}
+% \setcounter{page}{0}
+
+\chapterpages
+
+%turn figures on and off
+\newif \ifFIGS
+
+%\FIGStrue
+
+\FIGSfalse
+
+
+% to fix the page number
+%\input{Sample_chapter.tex}
+%\input{table.tex}
+\input{chap1_Introduction.tex}
+\input{chap2_Background.tex}
+\input{chap3_Methods.tex}
+\input{chap4_Algorithms.tex}
+\input{chap5_Results.tex}
+\input{chap6_Conclusion.tex}
+
+\bibliographystyle{abbrv}
+%\bibliography{BIB/thesis,BIB/vcl14}
+\end{document}
