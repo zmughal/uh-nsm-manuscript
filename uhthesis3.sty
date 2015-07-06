@@ -1,10 +1,10 @@
 %  University of Houston PhD/MS thesis style -- modifications to the report style
 % For LaTeX version 2.09
-% 
+%
 % Author: Dimitrios Georgakopoulos (dimitris@cs.uh.edu)
 %
-% The float and footnote macros bellow are stolen from the 
-% Stanfford University thesis style. 
+% The float and footnote macros bellow are stolen from the
+% Stanfford University thesis style.
 
 \typeout{Document Style Option `uhthesis' <31 Aug 90>.}
 
@@ -44,22 +44,22 @@ Example of use:
 Documentation:
     This style file modifies the standard report style to follow the
     Dean's Office "Preparing your Thesis/Dissertation for Submission
-    to the college of Natural Sciences and Mathematics: A Guideline".  
+    to the college of Natural Sciences and Mathematics: A Guideline".
 
     The \makecoverpages command creates a copyright page (optionally),
     the title page and, and the signature page.  The \begin{abstact}
     command creates the abstract page.  The abstract itself should be
-    included between a \begin{abstact} and an \end{abstact} command, 
-    as usual. Your (optional) acknowlegments should be included in the 
-    (optional) \begin{acknowledments} ...\end{acknowledments} section.  
-    The \makecontentspages command produces the table of contents, the 
+    included between a \begin{abstact} and an \end{abstact} command,
+    as usual. Your (optional) acknowlegments should be included in the
+    (optional) \begin{acknowledments} ...\end{acknowledments} section.
+    The \makecontentspages command produces the table of contents, the
     list of tables (optional) and the list of figures (optinal). Finally,
-    the \chapterpages command sets the page style of the main body of 
+    the \chapterpages command sets the page style of the main body of
     your thesis.
-    
+
     The following commands can control what goes in the front matter
     material:
-    
+
     \title{thesis title}
     \author{author's name}
         \degree{author's degree}{type of thesis}
@@ -68,14 +68,14 @@ Documentation:
                   \degree{Doctor of Philosophy}{Dissertation} is assumed
     \department{author's department}
         - Computer Science if omitted
-        \college{the college or school the thesis is submitted to}  
+        \college{the college or school the thesis is submitted to}
                 - College of Natural Sciences and Mathematics if omitted
     \adviser{the adviser's name}
     \firstreader{the first reader's name}
     \secondreader{the second reader's name}
     \thirdreader{the third reader's name}
     \fourthreader{the fourth reader's name}
-    \fifthreader{the fifth reader's name}    
+    \fifthreader{the fifth reader's name}
     \threereaderstrue or \threereadersfalse
         - print or don't print a third reader in the
                   signature page (true by default)
@@ -84,7 +84,7 @@ Documentation:
                   signature page (true by default)
     \fivereaderstrue or \fivereadersfalse
         - print or don't print a fifth reader in the
-                  signature page (true by default)                  
+                  signature page (true by default)
     \submitdate{month year in which the thesis is submitted}
         - date LaTeX'd if omitted
     \copyrighttrue or \copyrightfalse
@@ -118,9 +118,9 @@ with the `report' document style}}{}
 % Theses are single-sided, so we don't care about \evensidemargin
 \oddsidemargin 0.5in \evensidemargin 0in
 %\marginparwidth 40pt \marginparsep 10pt
-\topmargin 0in 
+\topmargin 0in
 \headsep 0.4in
-\textheight 8in 
+\textheight 8in
 \textwidth 5.95in
 
 % Disallow page breaks at hyphens (this will give some underfull vbox's,
@@ -131,7 +131,7 @@ with the `report' document style}}{}
 % Use 1.6 times the normal baseline-to-baseline skip
 \renewcommand{\baselinestretch}{1.7}
 
-% Roman page numbers in cover pages 
+% Roman page numbers in cover pages
 \pagenumbering{roman}
 
 % Redefine the macro used for floats (including figures and tables)
@@ -149,14 +149,14 @@ with the `report' document style}}{}
                          \if\@tempa b\advance\@tempcnta 4\relax\fi
                          \if\@tempa p\advance\@tempcnta 8\relax\fi
          }\global\count\@currbox\@tempcnta}\@fltovf\fi
-    \global\setbox\@currbox\vbox\bgroup 
+    \global\setbox\@currbox\vbox\bgroup
     \def\baselinestretch{1}\@normalsize
     \boxmaxdepth\z@
     \hsize\columnwidth \@parboxrestore}
 
 % Redefine the macro used for footnotes to use single spacing
 \long\def\@footnotetext#1{\insert\footins{\def\baselinestretch{1}\footnotesize
-    \interlinepenalty\interfootnotelinepenalty 
+    \interlinepenalty\interfootnotelinepenalty
     \splittopskip\footnotesep
     \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
     \hsize\columnwidth \@parboxrestore
@@ -165,7 +165,7 @@ with the `report' document style}}{}
       #1\strut}}}
 
 % \author, \title are defined in report style; here are the rest definitions
-% Define degree & thesis type 
+% Define degree & thesis type
 % it takes two arguments: author's degree and thesis/disseration/whatever
 % defaults Doctor of Philosophy and Dissertation
 \def\degree#1#2{
@@ -205,11 +205,11 @@ with the `report' document style}}{}
   July,\or August,\or September,\or October,\or November,\or December,\fi
   \space \number\the\year}
 
-\newif\ifcopyright 
-\copyrighttrue 
+\newif\ifcopyright
+\copyrighttrue
 
 \newif\iffigurelist
-\figurelisttrue 
+\figurelisttrue
 
 \newif\iftablelist
 \tablelisttrue
@@ -237,7 +237,7 @@ with the `report' document style}}{}
     \begin{center}
         \rm A \expandafter{\@thesistype}\\
         Presented to\\
-                the Faculty of the Department of 
+                the Faculty of the Department of
             \expandafter{\@department}\\
         University of Houston
     \vskip.3in
@@ -299,8 +299,8 @@ with the `report' document style}}{}
         \rightline{\shortstack[l]{\vrule width 3.75in height 0.4pt\\ \@fifthreader}}
       \fi
       \vspace{.4in}
-      
-      \rightline{\shortstack[l]{\vrule width 3.75in height 
+
+      \rightline{\shortstack[l]{\vrule width 3.75in height
                  0.4pt\\Dean, \expandafter{\@college}}}}
 
 \def\makecoverpages{%
@@ -321,7 +321,7 @@ with the `report' document style}}{}
     \begin{center}
         \rm An Abstract of a \expandafter{\@thesistype}\\
         Presented to\\
-                the Faculty of the Department of 
+                the Faculty of the Department of
             \expandafter{\@department}\\
         University of Houston
     \vskip.4in
@@ -338,7 +338,7 @@ with the `report' document style}}{}
         \@submitdate\\
     \end{center}}
 
-%Abstract 
+%Abstract
 \def\abstract{
             \def\baselinestretch{1.6}\@normalsize
             \abstractp
