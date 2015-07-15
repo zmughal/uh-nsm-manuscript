@@ -1,6 +1,6 @@
 ## University of Houston, College of Natural Sciences and Mathematics
 
-## MS / PhD thesis template
+## MS / PhD manuscript template
 
 The thesis/dissertation deadlines are at <https://nsm.uh.edu/academics/graduate/thesis-guidelines/index.php>
 and instructions are at <https://nsm.uh.edu/academics/graduate/thesis-guidelines/thesis-instructions/index.php>.
